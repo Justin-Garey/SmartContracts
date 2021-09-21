@@ -1,27 +1,18 @@
 # SmartContracts
+
 The Smart Contracts group repository for CS 3560.
 
-Justin Garey is the Maintainer.
-GitHub user: Justin-Garey.
+## Maintainer
 
-## Tools to be Used
-This project is being done with the Haskell programming language. 
-The ghc compiler is installed so we can use VSCode for programming.
-ghc stands for glastow haskell compiler and allows us to compile .hs files.
-We are using Git for version control and will use trello for our documentation.
-Trello is a project management tool where we can have cards to describe what needs done, 
-what has been done, and any other information the team members may need to accomplish 
-the task.
-
-## Team Member Roles
-The roles of the team members in this group, Blockchain Smart Contracts, have yet to be determined in a definite sense but we all have responsibilities to fill toward this project before we start dividing the project components amongst ourselves. These responsibilities include becoming familiar with the Haskel programming language. We are most likely going to use the platform Code Wars for this because of the fact that you can directly compare code to a language we are familiar with. We must also learn the basis of smart contract and blockchain programming and architecture. The Plutus platform is great for this as they may provide framework code for these systems.
+Justin Garey is the Maintainer\
+GitHub ID: Justin-Garey
 
 ## Developers:
 
-Reilly Schultz
+Reilly Schultz\
 GitHub ID: Ryscith
 
-Alexander Gibbs
+Alexander Gibbs\
 GitHub ID: GibbsAW
 
 ## Voting On The Blockchain:
@@ -40,3 +31,15 @@ If Time Allows:
 ## Meeting Times:
 
 Tues/Thurs 2:00 - 4:00
+
+## Tools to be Used
+
+- The Haskell programming language is being used to create Smart Contracts
+- The ghc compiler is installed so VSCode can be used for programming
+- ghc stands for glasgow haskell compiler and allows us to compile .hs files
+- We are using Git as our version control
+- Trello is being used for docmentation of what to do, what has been done, and other information.
+
+## Team Member Roles
+
+The roles of each team member are the same for now. We all need to learn Haskell and practice with the language. Then we will familiarize ourselves with smart contracts and the logic. Lastly we will use the plutus platform to test and implement this.
