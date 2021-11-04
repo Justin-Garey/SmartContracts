@@ -1,41 +1,49 @@
-import qualified Data.Text            as T
-import           Control.Monad        (void)
-import           Ledger               (Address, ScriptContext)
-import qualified Ledger.Constraints   as Constraints
+-- Imports
+import qualified Data.Text           as T
+import           Ledger               (ScriptContext)
 import qualified Ledger.Typed.Scripts as Scripts
-import           Ledger.Value         (Value)
 import           Playground.Contract
 import           Plutus.Contract
-import qualified PlutusTx
-import           PlutusTx.Prelude     hiding (Applicative (..))
-import qualified Prelude              as Haskell
+import           PlutusTx.Prelude
+import qualified Prelude             as Haskell
 
--- Validator function
+-- Schema
+type Schema =
+        Endpoint "vote" VoteParams
+
+-- Validator function TODO: Set this up with the script
 validateVote :: ScriptContext -> Bool
 validateVote _ = True
 
+-- Seems like it is needed
 data Vote
 instance Scripts.ValidatorTypes Vote where
     type instance DatumType Vote = VoteParams
 
-type VoteSchema =
-        Endpoint "vote" VoteParams
-
+-- Parameters for the "vote" endpoint
 newtype VoteParams = VoteParams
     { ballot :: Haskell.String
     }
     deriving stock (Haskell.Eq, Haskell.Show, Generic)
     deriving anyclass (FromJSON, ToJSON, ToSchema, ToArgument)
 
--- Submit a vote from a wallet to the contract
-vote :: AsContractError e => Promise () VoteSchema e ()
+-- Functions
+
+-- Says 
+vote :: AsContractError e => Promise () Schema e ()
 vote = endpoint @"vote" (logInfo @VoteParams)
 
--- Endpoints for playground to populate UI; The public interface
-endpoints :: Contract () VoteSchema T.Text ()
-endpoints = selectList [vote]
+-- | Logs "The Polls are Open!!" and calls a vote 
+poll :: AsContractError e => Contract () Schema e ()
+poll = do
+    logInfo @Haskell.String "The Polls are Open!!"
+    selectList [vote]
 
--- Generates "Glue Code" for the Playground
-mkSchemaDefinitions ''VoteSchema
+-- endpoints function is what is called to run the contract
+endpoints :: AsContractError e => Contract () Schema e ()
+endpoints = poll
+
+-- Set the endpoints in place
+mkSchemaDefinitions ''Schema
 
 $(mkKnownCurrencies [])
