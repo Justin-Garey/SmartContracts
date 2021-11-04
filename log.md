@@ -76,3 +76,11 @@
 
 ### October 26th 2021
 - Began to understand the Plutus Playground
+
+## Week 10
+
+### November 2nd 2021
+- Planned out how to set up the smart contract
+
+### November 4th 2021
+- Started designing the smart contract
