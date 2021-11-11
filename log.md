@@ -84,3 +84,12 @@
 
 ### November 4th 2021
 - Started designing the smart contract
+
+## Week 11
+
+### November 9th 2021
+- Made the checkpoint 3 for class
+- Discussed how to get the votes into a list to determine the winner
+
+### November 11th 2021
+- Justin did some testing and research into the votes list
