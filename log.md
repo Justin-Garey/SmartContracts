@@ -84,3 +84,31 @@
 
 ### November 4th 2021
 - Started designing the smart contract
+
+## Week 11
+
+### November 9th 2021
+- Made the checkpoint 3 for class
+- Discussed how to get the votes into a list to determine the winner
+
+### November 11th 2021
+- Justin did some testing and research into the votes list
+
+## Week 12
+
+### November 16th 2021
+- Idea for votes list was discarded
+
+### November 18th 2021
+- Found a governance module that could be used for this
+
+## Week 13
+
+### November 23rd 2021
+- Studied the governance script and more of the API
+- Realized we were too ambitious for the project
+
+## Week 14
+
+### November 30th
+- Made the final presentation
